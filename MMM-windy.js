@@ -8,7 +8,8 @@ Module.register('MMM-windy', {
     englishLabels: false,
     hourFormat: '12h',
     overlay: 'wind',
-    opacity: 1
+    opacity: 1,
+    reloadTime: 1000 * 60 * 60
   },
   getScripts: function() {
     return [
@@ -67,7 +68,8 @@ Module.register('MMM-windy', {
   },
   scheduleInit: function(delay) {
     var self = this;
-    setTimeout(() => {
+
+    const load = () => {
       const options = {
         key: self.config.apiKey,
         zoom: self.config.zoom,
@@ -84,6 +86,11 @@ Module.register('MMM-windy', {
       windyInit(options, windyAPI => {
         console.log(windyAPI);
       });
+    };
+
+    setTimeout(() => {
+      load();
+      setInterval(load, self.reloadTime);  
     }, delay);
   },
   getStyles: function() {
