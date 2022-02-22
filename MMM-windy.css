@@ -13,6 +13,7 @@ body {
 
 #windy #bottom {
   height: auto;
+  opacity: 0;
 }
 
 #windy::after {
