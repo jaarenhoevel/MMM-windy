@@ -13,7 +13,14 @@ body {
 
 #windy #bottom {
   height: auto;
+}
+
+#windy #bottom #progress-bar {
   opacity: 0;
+}
+
+#windy #bottom #legend-mobile {
+  height: 15px;
 }
 
 #windy::after {
