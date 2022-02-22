@@ -26,7 +26,7 @@ To use the module, add the following to the modules array in your `config/config
 		hourFormat: '12h', // optional
 		overlay: 'wind' // optional
 		opacity: 1, // optional
-    	reloadTime: 1000 * 60 * 60 // optional refresh time, default is 1h
+		reloadTime: 1000 * 60 * 60 // optional refresh time, default is 1h
 	}
 }
 ```
