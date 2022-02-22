@@ -90,7 +90,8 @@ Module.register('MMM-windy', {
 
     setTimeout(() => {
       load();
-      setInterval(load, self.reloadTime);  
+      setInterval(load, 60000);
+      console.log("reloadTime", self.reloadTime);  
     }, delay);
   },
   getStyles: function() {
