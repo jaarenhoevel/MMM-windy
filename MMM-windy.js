@@ -7,7 +7,8 @@ Module.register('MMM-windy', {
     graticule: false,
     englishLabels: false,
     hourFormat: '12h',
-    overlay: 'wind'
+    overlay: 'wind',
+    opacity: 1
   },
   getScripts: function() {
     return [
@@ -30,6 +31,7 @@ Module.register('MMM-windy', {
     }
     var mapDiv = document.createElement('div');
     mapDiv.id = 'windy';
+    mapDiv.style.opacity = self.config.opacity;
     wrapper.appendChild(mapDiv);
     console.log(wrapper);
 
